@@ -1,16 +1,11 @@
-package lab1;
+package lab3;
 
 /**
  * @author bazz
  * Mar 05 2023
- * 13:51
+ * 23:03
  */
-public class BubbleSort1 {
-    public static void main(String[] args) {
-        optimizedBubbleSort(new int[]{12, 34, 5, 4, 6, 7});
-        optimizedBubbleSort(new int[]{1, 2, 3, 4, 5, 6, 7}); //BEST CASE
-        optimizedBubbleSort(new int[]{7, 6, 5, 4, 3, 2, 1}); //WORST CASE
-    }
+public class BubbleSort2 {
 
     static int[] optimizedBubbleSort(int[] arr) {
         int length = arr.length;
@@ -18,7 +13,7 @@ public class BubbleSort1 {
             boolean isSwapped = false;
             for (int j = 0; j < length - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
-                    swap(arr, i, j);
+                    BubbleSort1.swap(arr, i, j);
                     isSwapped = true;
                 }
             }
@@ -27,11 +22,5 @@ public class BubbleSort1 {
             }
         }
         return arr;
-    }
-
-    static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
     }
 }
